@@ -1150,6 +1150,34 @@ sup {
   color: #939393;
 }
 
+.collection-shakers--bg {
+  background: url(../assets/images/shakers/bg.png) center/cover no-repeat;
+}
+
+.shakers {
+  grid-column: 1/span 2;
+}
+
+.shakers--bg {
+  background: url(../assets/images/shakers/img1.png) bottom center no-repeat;
+}
+
+.shakers__container {
+  padding: 0 90px 0 55px;
+}
+
+.shakers__info-price {
+  margin-top: 30px;
+}
+
+.shakers__info-person {
+  text-align: left;
+}
+
+.shakers__title {
+  max-width: 220px;
+}
+
 @supports (-webkit-appearance:none) {
   .header--bg {
     background: url(../assets/images/header/logo.webp) 2% 3% no-repeat,url(../assets/images/header/img1.png) 20% 100% no-repeat,url(../assets/images/header/bg.png) 18% top no-repeat,#e9eae2;
@@ -1170,6 +1198,14 @@ sup {
 
   .tea--bg {
     background: url(../assets/images/tea/img2.webp) bottom center no-repeat;
+  }
+
+  .collection-shakers--bg {
+    background: url(../assets/images/shakers/bg.webp) center/cover no-repeat;
+  }
+
+  .shakers--bg {
+    background: url(../assets/images/shakers/img1.webp) bottom center no-repeat;
   }
 }
 
@@ -1207,6 +1243,10 @@ sup {
     padding: 0 15px;
   }
 
+  .shakers--bg {
+    background: url(../assets/images/shakers/img1.png) bottom right no-repeat;
+  }
+
 @supports (-webkit-appearance:none) {
     .header--bg {
       background: url(../assets/images/header/logo.webp) 2% 3% no-repeat,url(../assets/images/header/img1.png) 100% 100% no-repeat,url(../assets/images/header/bg.png) 18% top no-repeat,#e9eae2;
@@ -1214,6 +1254,10 @@ sup {
 
     .tea--bg {
       background: url(../assets/images/tea/img2.webp) bottom right no-repeat;
+    }
+
+    .shakers--bg {
+      background: url(../assets/images/shakers/img1.webp) bottom right no-repeat;
     }
 }
 }
@@ -1263,6 +1307,8 @@ sup {
     padding: 15px 0;
   }
 
+  .collection-shakers,
+  .shakers,
   .tea {
     grid-column: 1/span 3;
   }

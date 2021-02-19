@@ -1,0 +1,30 @@
+.shakers {
+	grid-column: 1/span 2;
+
+	@media screen and(max-width:576px) {
+		grid-column: 1/span 3;
+	}
+}
+.shakers--bg {
+	background:url("@{way-img}/shakers/img1.png") bottom center no-repeat;
+
+	@media screen and(max-width:992px) {
+		background:url("@{way-img}/shakers/img1.png") bottom right  no-repeat;
+	}
+}
+.shakers__container{
+	padding: 0 90px 0 55px;
+}
+
+.shakers__info-price{
+	margin-top: 30px;
+}
+
+.shakers__info-person{
+	text-align: left;
+}
+
+
+.shakers__title {
+	max-width: 220px;
+}
