@@ -1,0 +1,31 @@
+.image{
+	position: relative;
+	grid-column: 1/span 3;
+}
+
+.image__img{
+	.wh(100%,100%);
+	
+	object-fit: cover;
+	object-position: center;
+}
+
+.image__icon{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.wh(160px,160px);
+
+	position:absolute;
+	top:25%;
+	left:32%;
+
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.image__text{
+	margin-top: 10px;
+	.font(17px,12px,"Roboto",#939393);
+}
