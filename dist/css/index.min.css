@@ -599,6 +599,7 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 
+.footer__row,
 .pos-rel {
   position: relative;
   top: 0;
@@ -1214,6 +1215,73 @@ sup {
   max-width: 190px;
 }
 
+.footer {
+  position: relative;
+  grid-column: 1/span 3;
+}
+
+.footer__container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+.footer--bg {
+  background: url(../assets/images/footer/bg.png) center center/cover no-repeat;
+}
+
+.footer__img {
+  background: rgba(0,0,0,.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.footer__img:hover {
+  background: rgba(240,186,124,.5);
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  z-index: 5;
+}
+
+.footer__inner-icon {
+  margin-top: 40px;
+}
+
+.footer__link+.footer__link {
+  margin-left: 25px;
+}
+
+.footer__text {
+  font: 1.6rem/.9em Roboto;
+  display: block;
+  margin-top: 40px;
+  color: #7c7a7a;
+}
+
+.footer__title {
+  font: 3rem/.9em Roboto;
+  margin-top: 20px;
+  color: #7c7a7a;
+}
+
 @supports (-webkit-appearance:none) {
   .header--bg {
     background: url(../assets/images/header/logo.webp) 2% 3% no-repeat,url(../assets/images/header/img1.png) 20% 100% no-repeat,url(../assets/images/header/bg.png) 18% top no-repeat,#e9eae2;
@@ -1250,6 +1318,10 @@ sup {
 
   .authentics--bg {
     background: url(../assets/images/authentics/img1.webp) bottom center no-repeat;
+  }
+
+  .footer--bg {
+    background: url(../assets/images/footer/bg.webp) center center/cover no-repeat;
   }
 }
 
@@ -1297,6 +1369,27 @@ sup {
 
   .authentics__container {
     padding: 0 15px;
+  }
+
+  .footer__container {
+    padding: 20px 15px;
+  }
+
+  .footer__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__column:nth-child(1) {
+    margin-bottom: 50px;
+  }
+
+  .footer__inner-icon,
+  .footer__text,
+  .footer__title {
+    text-align: center;
   }
 
 @supports (-webkit-appearance:none) {
