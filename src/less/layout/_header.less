@@ -7,45 +7,73 @@
 .header{
 	position: relative;
 	grid-column: 1/span 2;
-	// @media screen and(max-width:1140px) {
-	// 	grid-column: 1/span 3;
-	// }
+
+	@media screen and(max-width:1140px) {
+		grid-column: 1/span 3;
+		grid-row: 1/1;
+	}
 }
+
+.header__deg{
+	.wh(350px,300px);
+
+	position: absolute;
+	top:0;
+	left:10%;
+
+	@media screen and(max-width:576px) {
+		left:50%;
+		transform: translateX(-50%);
+	}
+
+	&::before{
+		content: "";
+		.wh(100%,100%);
+
+		position: absolute;
+		top:0;
+		left:0%;
+
+		opacity: 0.8;
+		background:url(../assets/images/header/bg.png) center top no-repeat;
+	}
+}
+
+
 
 .header--bg {
 	background-color: #e9eae2;
 	background: url(../assets/images/header/logo.png) 2% 3% no-repeat,
 	url(../assets/images/header/img1.png) 20% 100% no-repeat,
-	url(../assets/images/header/bg.png) 18% top no-repeat,
 	#e9eae2;
-
+	
 	@media screen and(max-width:992px) {
 		background: url(../assets/images/header/logo.png) 2% 3% no-repeat,
 	url(../assets/images/header/img1.png)100% 100% no-repeat,
-	url(../assets/images/header/bg.png) 18% top no-repeat,
 	#e9eae2;
 	}
 
 	@media screen and(max-width:576px) {
 		background: url(../assets/images/header/logo.png) 2% 3% no-repeat,
-		url(../assets/images/header/bg.png) center top / cover no-repeat,
 		#e9eae2;
 		}
 	}
 
 .header__slider-container{
-	position:absolute;
-	top:13%;
-	left:23.5%;
 	width: 100px;
 
-	@media screen and(max-width:576px) {
-		position:absolute;
-		top:20%;
-		left:50%;
-		transform: translateX(-50%);
-	}
+	position:absolute;
+	top:35%;
+	left:50%;
+	z-index: 0;
+	transform: translateX(-50%);
+
 }
+
+.header__slider-wrapper{
+	text-align: center;
+}
+
 .header__slider-next,
 .header__slider-prev{
 	.wh(7px,14px);
@@ -59,8 +87,6 @@
 .header__slider-next{
 	transform: rotate(0deg);
 }
-
-
 
 .container {
 	display: flex;
@@ -87,6 +113,7 @@
 		padding:200px 15px 215px 15px;
 	}
 }
+
 .header__info-price{
 	margin-top: 50px;
 }
@@ -140,48 +167,5 @@
 	max-width: 300px;
 }
 
-.header__menu {
-	display: flex;
-	flex-direction: column;
-
-	position: absolute;
-	top: 50px;
-	right: 0;
-}
-
-.header__link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	.wh(70px,60px);
-
-	transition: background-color 500ms ease;
-}
-.header__link-one:hover{
-	background-color: #86d8cd;
-}
-
-.header__link-one.active{
-	background-color: #86d8cd;
-}
-
-.header__link-two:hover{
-	background-color: #ffe600d7;
-}
-
-.header__link-two.active{
-	background-color: #ffe600d7;
-}
-
-.header__link-three:hover{
-	background-color: #142038d7;
-}
-
-.header__link-three.active{
-	background-color: #142038d7;
-}
 
 
-
-.header__icon {
-}

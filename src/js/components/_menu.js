@@ -1,17 +1,19 @@
-const menu = document.querySelector('.header__menu')
+const menu = document.querySelector('.warehouse__menu')
 const close = document.querySelector('.warehouse__close')
 const img = document.querySelector('.warehouse__img')
 const nav = document.querySelector('.warehouse__nav')
+const warehouse = document.querySelector('.warehouse')
 
-const linkOne = document.querySelector('.header__link-one')
-const linkTwo = document.querySelector('.header__link-two')
-const linkThree = document.querySelector('.header__link-three')
+const linkOne = document.querySelector('.warehouse__link-one')
+const linkTwo = document.querySelector('.warehouse__link-two')
+const linkThree = document.querySelector('.warehouse__link-three')
 
 
 close.addEventListener('click', () => {
 	classLitstRemove(close)
-	classLitstRemove(img)
 	classLitstRemove(nav)
+	classLitstRemove(warehouse)
+	classLitstRemove(menu)
 
 	if (linkOne.classList.contains("active")) {
 		classLitstRemove(linkOne)
@@ -35,70 +37,106 @@ function hasRemove(hasElement, removeElement) {
 
 }
 
+function getBgColor(element,color) {
+	element.style.backgroundColor = color
+}
+
+function getTextColor(element, color) {
+	element.style.color = color
+}
+
 
 menu.addEventListener('click', (event) => {
 
-	if (event.target.classList.contains("header__link-one")) {
+	if (event.target.classList.contains("warehouse__link-one")) {
 		classListAdd(close)
-		classListAdd(img)
 		classListAdd(nav)
+		classListAdd(warehouse)
 		classListAdd(linkOne)
+		getBgColor(nav, '#0b3b35dc')
 
 		hasRemove(linkTwo, linkTwo)
 		hasRemove(linkThree, linkThree)
+
+		if (window.innerWidth <= 768) {
+		classListAdd(menu)
+		}
 	}
 
-	if (event.target.classList.contains("header__icon-one")) {
+	if (event.target.classList.contains("warehouse__icon-one")) {
 		classListAdd(close)
-		classListAdd(img)
 		classListAdd(nav)
+		classListAdd(warehouse)
 		classListAdd(linkOne)
+		getBgColor(nav,'#0b3b35dc')
 
 		hasRemove(linkTwo, linkTwo)
 		hasRemove(linkThree, linkThree)
 
+		if (window.innerWidth <= 768) {
+		classListAdd(menu)
+		}
 	}
 
-	if (event.target.classList.contains("header__link-two")) {
+	if (event.target.classList.contains("warehouse__link-two")) {
 		classListAdd(close)
-		classListAdd(img)
 		classListAdd(nav)
+		classListAdd(warehouse)
 		classListAdd(linkTwo)
-
+		getBgColor(nav,'#5f570fd7')
 
 		hasRemove(linkOne, linkOne)
 		hasRemove(linkThree, linkThree)
 
+		if (window.innerWidth <= 768) {
+		classListAdd(menu)
+		}
 	}
 
-	if (event.target.classList.contains("header__icon-two")) {
+	if (event.target.classList.contains("warehouse__icon-two")) {
 		classListAdd(close)
-		classListAdd(img)
 		classListAdd(nav)
+		classListAdd(warehouse)
 		classListAdd(linkTwo)
+		getBgColor(nav,'#5f570fd7')
 
 		hasRemove(linkOne, linkOne)
 		hasRemove(linkThree, linkThree)
+
+		if (window.innerWidth <= 768) {
+		classListAdd(menu)
+		}
 	}
 
-	if (event.target.classList.contains("header__link-three")) {
+	if (event.target.classList.contains("warehouse__link-three")) {
 		classListAdd(close)
-		classListAdd(img)
 		classListAdd(nav)
+		classListAdd(warehouse)
+		classListAdd(menu)
 		classListAdd(linkThree)
+		getBgColor(nav,'#142038d7')
 
 		hasRemove(linkTwo, linkTwo)
 		hasRemove(linkOne, linkOne)
 
+		if (window.innerWidth <= 768) {
+		classListAdd(menu)
+		}
+
 	}
-	if (event.target.classList.contains("header__icon-three")) {
+	if (event.target.classList.contains("warehouse__icon-three")) {
 		classListAdd(close)
-		classListAdd(img)
 		classListAdd(nav)
+		classListAdd(warehouse)
 		classListAdd(linkThree)
+		getBgColor(nav, '#142038d7')
 
 		hasRemove(linkTwo, linkTwo)
 		hasRemove(linkOne, linkOne)
+
+		if (window.innerWidth <= 768) {
+		classListAdd(menu)
+		}
 	}
 
 

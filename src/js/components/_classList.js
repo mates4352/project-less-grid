@@ -5,3 +5,7 @@ function classLitstRemove(value) {
 function classListAdd(value) {
 	value.classList.add('active')
 }
+
+
+
+
