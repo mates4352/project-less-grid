@@ -1,5 +1,6 @@
 //= components/_classList.js
 //= components/_menu.js
+//= components/_like
 
 
 

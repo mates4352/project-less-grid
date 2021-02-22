@@ -599,14 +599,20 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 
+.authentics,
 .footer__row,
+.info-price,
+.info-price__like,
 .pos-rel,
+.shakers,
+.tea,
 .warehouse {
   position: relative;
   top: 0;
   left: 0;
 }
 
+.header__deg::before,
 .pos-abs,
 .warehouse__nav--bg {
   position: absolute;
@@ -777,6 +783,12 @@ sup {
   grid-column: 1/span 2;
 }
 
+.header__logo {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+}
+
 .header__deg {
   width: 350px;
   height: 300px;
@@ -789,15 +801,13 @@ sup {
   content: "";
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 0;
   opacity: .8;
   background: url(../assets/images/header/bg.png) center top no-repeat;
 }
 
 .header--bg {
-  background: url(../assets/images/header/logo.png) 2% 3% no-repeat,url(../assets/images/header/img1.png) 20% 100% no-repeat,#e9eae2;
+  background: url(../assets/images/header/img1.png) 20% 100% no-repeat,#e9eae2;
 }
 
 .header__slider-container {
@@ -850,14 +860,15 @@ sup {
   padding: 150px 135px 215px 55px;
 }
 
-.header__info-price {
-  margin-top: 50px;
-}
-
 .info-price {
+  z-index: 10;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  border: 1px solid #000;
+}
+
+.header__info-price {
+  z-index: 0;
+  margin-top: 50px;
 }
 
 .text {
@@ -867,7 +878,13 @@ sup {
 }
 
 .info-person {
+  position: relative;
+  z-index: 10;
   text-align: center;
+}
+
+.header__info-person {
+  z-index: 0;
 }
 
 .text-person {
@@ -1121,23 +1138,44 @@ sup {
   min-height: 370px;
 }
 
-.tea--bg {
-  background: url(../assets/images/tea/img2.png) bottom center no-repeat;
+.img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .tea__info-price {
   margin-top: 30px;
 }
 
-.tea__container {
-  padding: 0 130px 0 55px;
-}
-
-.info-price__love {
+.info-price__like {
+  display: inline-block;
   margin-top: 40px;
+  padding-left: 25px;
   line-height: .6em;
   font-size: 1.9rem;
   color: #c5c5c5;
+}
+
+.info-price__icon {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  fill: #c5c5c5;
+  -webkit-transition: fill .5s;
+  -o-transition: fill .5s;
+  transition: fill .5s;
+}
+
+.info-price__like.active .info-price__icon {
+  fill: #d43b3b;
+}
+
+.tea__container {
+  padding: 0 130px 0 55px;
 }
 
 .tea__info-person {
@@ -1200,12 +1238,8 @@ sup {
   grid-column: 1/span 2;
 }
 
-.shakers--bg {
-  background: url(../assets/images/shakers/img1.png) bottom center no-repeat;
-}
-
 .shakers__container {
-  padding: 0 90px 0 55px;
+  padding: 50px 90px 25px 55px;
 }
 
 .shakers__info-price {
@@ -1214,10 +1248,7 @@ sup {
 
 .shakers__info-person {
   text-align: left;
-}
-
-.shakers__title {
-  max-width: 220px;
+  max-width: 250px;
 }
 
 .collection-authentics {
@@ -1235,8 +1266,8 @@ sup {
   min-height: 370px;
 }
 
-.authentics--bg {
-  background: url(../assets/images/authentics/img1.png) bottom center no-repeat;
+.authentics__img {
+  bottom: -20%;
 }
 
 .authentics__info-price {
@@ -1328,7 +1359,7 @@ sup {
   }
 
   .header--bg {
-    background: url(../assets/images/header/logo.webp) 2% 3% no-repeat,url(../assets/images/header/img1.png) 20% 100% no-repeat,#e9eae2;
+    background: url(../assets/images/header/img1.webp) 20% 100% no-repeat,#e9eae2;
   }
 
   .header__slider-next,
@@ -1344,24 +1375,12 @@ sup {
     background: url(../assets/images/tea/bg.webp) center center/cover no-repeat;
   }
 
-  .tea--bg {
-    background: url(../assets/images/tea/img2.webp) bottom center no-repeat;
-  }
-
   .collection-shakers--bg {
     background: url(../assets/images/shakers/bg.webp) center/cover no-repeat;
   }
 
-  .shakers--bg {
-    background: url(../assets/images/shakers/img1.webp) bottom center no-repeat;
-  }
-
   .collection-authentics--bg {
     background: url(../assets/images/authentics/bg.webp) center center/cover no-repeat;
-  }
-
-  .authentics--bg {
-    background: url(../assets/images/authentics/img1.webp) bottom center no-repeat;
   }
 
   .footer--bg {
@@ -1408,6 +1427,11 @@ sup {
     -ms-flex-pack: center;
     justify-content: center;
   }
+
+  .img,
+  .shakers__img {
+    left: 40%;
+  }
 }
 
 @media screen and (max-width:992px) {
@@ -1429,7 +1453,7 @@ sup {
   }
 
   .info-price {
-    margin: 50px 0 25px;
+    margin: 25px 0;
   }
 
   .info-person {
@@ -1444,24 +1468,52 @@ sup {
     grid-column: 1/span 3;
   }
 
-  .tea--bg {
-    background: url(../assets/images/tea/img2.png) bottom right no-repeat;
+  .img {
+    left: 100%;
+  }
+
+  .tea__info-price {
+    margin-top: 0;
   }
 
   .tea__container {
-    padding: 0 15px;
+    padding: 25px;
   }
 
-  .shakers--bg {
-    background: url(../assets/images/shakers/img1.png) bottom right no-repeat;
+  .shakers__img {
+    left: -10%;
   }
 
-  .authentics--bg {
-    background: url(../assets/images/authentics/img1.png) bottom left no-repeat;
+  .shakers__container {
+    padding: 25px;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .shakers__info-price {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-top: 0;
+    text-align: right;
+  }
+
+  .shakers__info-person {
+    max-width: none;
+    text-align: right;
+  }
+
+  .authentics__img {
+    bottom: -25%;
+    left: 120%;
+  }
+
+  .authentics__info-price {
+    margin-top: 0;
   }
 
   .authentics__container {
-    padding: 0 15px;
+    padding: 25px;
   }
 
   .footer__container {
@@ -1488,18 +1540,6 @@ sup {
 @supports (-webkit-appearance:none) {
     .header--bg {
       background: url(../assets/images/header/logo.webp) 2% 3% no-repeat,url(../assets/images/header/img1.png) 100% 100% no-repeat,#e9eae2;
-    }
-
-    .tea--bg {
-      background: url(../assets/images/tea/img2.webp) bottom right no-repeat;
-    }
-
-    .shakers--bg {
-      background: url(../assets/images/shakers/img1.webp) bottom right no-repeat;
-    }
-
-    .authentics--bg {
-      background: url(../assets/images/authentics/img1.webp) bottom left no-repeat;
     }
 }
 }
@@ -1540,7 +1580,7 @@ sup {
   }
 
   .header__container {
-    padding: 200px 15px 215px;
+    padding: 250px 15px 100px;
   }
 
   .info-price {
