@@ -797,6 +797,8 @@ sup {
 
 /*-components-*/
 
+/*------layout------*/
+
 /*-Header-*/
 
 .page {
@@ -899,6 +901,7 @@ sup {
 }
 
 .text {
+  max-width: 270px;
   line-height: 1.3em;
   font-size: 2.8rem;
   color: #969693;
@@ -1144,14 +1147,8 @@ sup {
   z-index: 5;
 }
 
-.collection-tea {
-  grid-column: 1/span 1;
-}
-
 .collection-tea--bg {
-  width: 100%;
-  height: 100%;
-  background: url("../assets/images/tea/bg.png") center center/cover no-repeat;
+  background-color: #7cd5c9;
 }
 
 .inner {
@@ -1192,6 +1189,7 @@ sup {
 .tea {
   grid-column: 2/span 2;
   min-height: 370px;
+  background-color: #f6f6f6;
 }
 
 .img {
@@ -1214,6 +1212,10 @@ sup {
   line-height: 0.6em;
   font-size: 1.9rem;
   color: #c5c5c5;
+}
+
+.info-price__like-text {
+  display: block;
 }
 
 .info-price__icon {
@@ -1288,12 +1290,13 @@ sup {
 }
 
 .collection-shakers--bg {
-  background: url("../assets/images/shakers/bg.png") no-repeat center/cover;
+  background-color: #c0e79e;
 }
 
 .shakers {
   min-height: 370px;
   grid-column: 1/span 2;
+  background-color: #f6f6f6;
 }
 
 .shakers__container {
@@ -1311,12 +1314,13 @@ sup {
 
 .collection-authentics {
   grid-column: 1/span 1;
+  background-color: #d1a516;
 }
 
 .collection-authentics--bg {
   width: 100%;
   height: 100%;
-  background: url("../assets/images/authentics/bg.png") center center/cover no-repeat;
+  background: url("../assets/images/authentics/bg.png") cover no-repeat;
 }
 
 .authentics {
@@ -1372,10 +1376,6 @@ sup {
   -webkit-transition: background-color 500ms ease;
   -o-transition: background-color 500ms ease;
   transition: background-color 500ms ease;
-}
-
-.footer__img:hover {
-  background-color: rgba(240, 186, 124, 0.5);
 }
 
 .footer__row {
@@ -1435,16 +1435,8 @@ sup {
     background: url("../assets/images/warehouse/bg.webp") center center/cover no-repeat;
   }
 
-  .collection-tea--bg {
-    background: url("../assets/images/tea/bg.webp") center center/cover no-repeat;
-  }
-
-  .collection-shakers--bg {
-    background: url("../assets/images/shakers/bg.webp") no-repeat center/cover;
-  }
-
   .collection-authentics--bg {
-    background: url("../assets/images/authentics/bg.webp") center center/cover no-repeat;
+    background: url("../assets/images/authentics/bg.webp") cover no-repeat;
   }
 
   .footer--bg {
@@ -1689,6 +1681,12 @@ sup {
 
   .tea {
     grid-column: 1/span 3;
+  }
+
+  .image__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .collection-shakers {

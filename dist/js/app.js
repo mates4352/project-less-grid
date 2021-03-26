@@ -136,9 +136,9 @@ const lineText = document.querySelector('.info-price__like-text')
 
 likeBlock.forEach((event) => {
 	event.addEventListener('click', () => {
-		let data = event.getAttribute("data");
+		const data = event.getAttribute("data");
 		event.classList.toggle('active')
-		let like = document.querySelector(`.info-price__like-text[data="${data}"]`)
+		const like = document.querySelector(`.info-price__like-text[data="${data}"]`)
 
 		if (like.innerHTML == 'ADD TO FAVS') {
 			like.innerHTML = 'FAVED';
